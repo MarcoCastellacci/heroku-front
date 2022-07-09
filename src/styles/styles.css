@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+/* Generales */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%
+}
+
+html,
+body {
+  position: relative;
+  height: 100%
+}
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.style {
+  padding: 0 !important;
+}
+
+/* Contenedores Generales */
+
+.main {
+  background-image: url("https://jetnews.com.mx/wp-content/uploads/2017/11/10-Common-Travel-Mistakes-You-Can-Avoid.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.main-cities {
+  min-height: 100vh;
+}
+
+.call {
+  margin: 10rem;
+  margin-bottom: 5rem;
+  width: 90vw;
+
+}
+
+.gif-cities {
+  width: 50%;
+  height: 50vh;
+  margin-bottom: 10rem;
+}
+
+.title-cities {
+  font-family: 'Joan', serif;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title-app {
+  border-radius: 100px !important;
+  width: 95% !important;
+}
+
+
+
+
+/* Carrousel */
+.swiper {
+  width: 90vw;
+  height: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+}
+
+.carrousel-title {
+  background-color: rgba(0, 0, 0, 0.212);
+  font-family: 'Joan', serif !important;
+  ;
+  font-weight: bold !important;
+  width: 95vw;
+  text-align: center;
+  text-shadow: 0px 0px 5px black;
+}
+
+.carrousel-title h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: rgba(90, 180, 249, 0.392);
+  height: calc((100% - 50px) / 2) !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.cities {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+/* Navbar y Footer */
+.logo {
+  width: 30%;
+  height: auto;
+}
+
+.logo-footer {
+  width: 30%;
+  height: auto;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.logos {
+  width: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* Call To Action */
+.slogan {
+  background-color: rgba(69, 215, 255, 0.321);
+  margin-top: -5rem;
+  width: 100%;
+  height: 60vh;
+  border-radius: 100px;
+}
+
+/* Non Page */
+
+.non-page {
+  height: 100vh;
+}
+
+.non-page img {
+  width: 30%;
+}
+
+/* Pagina de Ciudades */
+.image-list-item img {
+  height: 50vh !important;
+}
+
+/* Pagina Detalles */
+
+.image-detail img {
+  height: 50vh !important;
+  object-fit: contain !important;
+  width: 80vw !important;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
+  background-color: rgba(0, 0, 0, 0.651);
+  color: antiquewhite;
+  text-align: center !important;
+}
+
+.description p {
+  width: 70% !important;
+  line-height: 1rem;
+}
+
+.city-name {
+  font-family: 'Joan', serif !important;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0px 0px 5px rgb(70, 39, 247);
+}
+
+.itinerary {
+  margin: 2rem !important;
+}
+
+/* Sign Up - In */
+.logo-sign {
+  width: 50% !important;
+  height: auto !important;
+}
+
+.gif {
+  width: 58.3% !important;
+  height: auto !important;
+}
+
+
+
+/* Componenetes Botones Externos */
+.arrow-up {
+  font-size: 2rem !important;
+  position: relative;
+  left: 48%;
+  margin: 0 !important;
+}
+
+/* From uiverse.io by @Madflows */
+.button {
+  display: flex;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  position: relative;
+  overflow: hidden;
+  height: 1.5rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #213553;
+  background-size: 400%;
+  margin-bottom: 1rem;
+}
+
+.button span {
+  color: antiquewhite;
+  align-content: center;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(82.3deg,
+      rgb(93, 130, 233) 10.8%,
+      rgb(88, 111, 238) 94.3%);
+  transition: all 0.475s;
+}
+
+/* From uiverse.io by @alexruix */
+/* From uiverse.io by @alexruix */
+.input {
+  line-height: 28px;
+  border: 2px solid transparent;
+  border-bottom-color: #777;
+  padding: .2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: #0d0c22;
+  transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  padding: .2rem 1rem;
+  border-radius: 1rem;
+  border-color: #7a9cc6;
+}
+
+.input::placeholder {
+  color: #777;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+/* From uiverse.io by @Allyhere */
+.btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  text-decoration: none;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+  align-self: center !important;
+}
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-within, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+/* From uiverse.io by @xXJollyHAKERXx */
+.button1 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 25px;
+  width: 65px;
+  border: 0px solid;
+  background-image: linear-gradient(45deg, blue, #00f0a0, blue);
+  background-size: 500% 400%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.6s all;
+  margin: 0 .5rem !important;
+}
+
+.button1:hover {
+  background-position: 75% 50%;
+  transform: perspective(100px)
+}
+
+.button1:active {
+  transform: scale(0.95);
+  transition: 0.1s;
+}
+
+/* Media Queries */
+
+@media (min-width: 1920px) {
+  .main {
+    min-height:100vh !important;
+  }
+}
+  
+
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
+
+@media (max-width: 1080px) {
+  .slogan {
+    width: 80%;
+    height: 30rem;
+    margin: 0 auto;
+    margin-top: -5rem;
+  }
+
+  .cities {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .gif {
+    width: 60% !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .slogan {
+    width: 100%;
+    height: auto;
+  }
+
+  .carrousel-title {
+    font-size: 2rem !important;
+  }
+
+  .btn-cities {
+    width: 100%;
+    height: auto;
+  }
+
+  .title-app {
+    border-radius: 100px !important;
+    width: 95% !important;
+    margin: .5rem auto !important;
+  }
+
+  .call {
+    margin: 3rem auto !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .logo {
+    width: 60%;
+  }
+}
