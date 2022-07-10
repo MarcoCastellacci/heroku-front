@@ -1,9 +1,8 @@
 import React , {useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-
-import '../src/styles/App.css';
 import "swiper/css/bundle";
+import '../src/styles/App.css';
 import "../src/styles/styles.css";
 
 import Navbar from './components/Navbar';
