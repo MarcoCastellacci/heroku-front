@@ -1,7 +1,7 @@
 import React , {useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import "swiper/css/bundle";
+//import "swiper/css/bundle";
 import '../src/styles/App.css';
 import "../src/styles/styles.css";
 
