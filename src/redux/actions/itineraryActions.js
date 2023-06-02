@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let urlApi = "https://mytinerary-castellacci.herokuapp.com/"
+let urlApi = "https://api-mytinerary.onrender.com/";
 //let urlApi = "http://localhost:4000/"
 
 const itineraryActions = {

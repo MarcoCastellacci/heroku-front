@@ -1,6 +1,6 @@
 import axios from "axios";  
 
-let apiUrl = "https://mytinerary-castellacci.herokuapp.com/"
+let apiUrl = "https://api-mytinerary.onrender.com/";
 // let apiUrl = "http://localhost:4000/"
 
 const citiesActions = {
@@ -17,6 +17,7 @@ const citiesActions = {
         return async (dispatch, getState) => {
             try {
                 const res = await axios.get(apiUrl + 'api/cities')
+                console.log(res);
                 dispatch({type: 'GET_CITIES', payload: res.data.response.cities
                 })
             } catch (error) {
@@ -61,6 +62,6 @@ const citiesActions = {
             }
         }
     }
-}   
+}
 
 export default citiesActions

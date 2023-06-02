@@ -21,7 +21,7 @@ const itineraryReducer = (state = initialState, action) => {
                 ...state,
                 likes: [...state.likes, action.payload]
             }
-        default:            
+        default:
             return state
     }
 }

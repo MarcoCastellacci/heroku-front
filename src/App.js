@@ -47,8 +47,8 @@ useEffect(() => {
 const user = useSelector(store => store.userReducer.user);
 useEffect(() => {
 dispatch(citiesActions.getCities())
-// eslint-disable-next-line
-},[])
+
+},[dispatch])
   return (
     <>
       
