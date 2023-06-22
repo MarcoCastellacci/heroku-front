@@ -51,7 +51,6 @@ dispatch(citiesActions.getCities())
 },[dispatch])
   return (
     <>
-      
       <Navbar />
       <Routes>
         <Route path="/user" element={<UserPage />} />
@@ -59,7 +58,7 @@ dispatch(citiesActions.getCities())
         <Route path="/cities/city/:id" element={<Details/>} />
         <Route path="/cities/city/:id" element={<Itinerary/>} />
         {<Route path="/signin" element={user ? <UserPage /> : <LogIn/>} />}
-        {<Route path="/signup" element={user ? <UserPage /> : <SignUp/>} />}  
+        {<Route path="/signup" element={user ? <UserPage /> : <SignUp/>} />}
         <Route path="/" element={<Index/>} />
         <Route path="/index" element={<Index/>} />
         <Route path="*" element={<NonPage/>} />

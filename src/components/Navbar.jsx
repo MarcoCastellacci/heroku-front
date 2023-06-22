@@ -11,11 +11,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Logo from '../img/logo.png';
-import '../styles/styles.css';
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch} from "react-redux";
 import Avatar from '@mui/material/Avatar';
 import userActions from '../redux/actions/userActions';
+
+import '../styles/styles.css';
 
 const pages = [{ to: '/index', name: 'Home' }, { to: '/cities', name: 'Cities' }, { to: '/user', name: 'Profile' }];
 const settings = [{ to: '/signin', name: 'Sign In' }, { to: '/signup', name: 'Sign Up' }];
