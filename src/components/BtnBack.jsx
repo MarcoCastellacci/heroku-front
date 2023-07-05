@@ -3,14 +3,14 @@ import { Link as RouterLink } from 'react-router-dom';
 
 
 function BtnBack() {
-return(
+    return (
         <div className='button'>
             <RouterLink to={'/cities'}>
                 <span className='button-content'> Back to Cities
                 </span>
-            </RouterLink>    
+            </RouterLink>
         </div>
-)
+    )
 }
 
 export default BtnBack;
