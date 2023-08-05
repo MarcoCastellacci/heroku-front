@@ -8,9 +8,11 @@ import Stack from '@mui/material/Stack';
 function SignOut() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
+
     function signOut() {
         dispatch(userActions.SignOutUser())
         navigate('/')
+        window.location.reload();
     }
 
     return (
@@ -25,7 +27,8 @@ function SignOut() {
                 <RouterLink to={'/'} >
                     <span className='btn-donate'>
                         See you soon!
-                    </span></RouterLink>
+                    </span>
+                </RouterLink>
             </Stack>
         </>
     )

@@ -1,14 +1,14 @@
 import axios from "axios";
 
-let apiUrl = "https://api-mytinerary.onrender.com/";
-//let apiUrl = "http://localhost:4000"
+let apiUrl = "https://heroku-back-lp4y-dev.fl0.io/"
+// let apiUrl = "http://localhost:4000"
 
 const commentsActions = {
     addComment: (comment) => {
         const token = localStorage.getItem("token")
         return async (dispatch, getState) => {
             if (comment.comment !== "") {
-                const res = await axios.post(apiUrl + '/api/itinerary/comments', { comment }, {
+                const res = await axios.post(apiUrl + 'api/itinerary/comments', { comment }, {
                     headers: { Authorization: `Bearer  ` + token }
                 })
                 console.log(res)
@@ -37,7 +37,7 @@ const commentsActions = {
     modifyComment: (comment) => {
         const token = localStorage.getItem("token")
         return async (dispatch, getState) => {
-            const res = await axios.put(apiUrl + '/api/itinerary/comments/', { comment }, {
+            const res = await axios.put(apiUrl + 'api/itinerary/comments/', { comment }, {
                 headers: { Authorization: `Bearer  ` + token }
             })
             dispatch({
@@ -54,7 +54,7 @@ const commentsActions = {
     deleteComment: (id) => {
         const token = localStorage.getItem("token")
         return async (dispatch, getState) => {
-            const res = await axios.post(apiUrl + `/api/itinerary/comments/${id}`, {}, {
+            const res = await axios.post(apiUrl + `api/itinerary/comments/${id}`, {}, {
                 headers: { Authorization: `Bearer  ` + token }
             })
             dispatch({

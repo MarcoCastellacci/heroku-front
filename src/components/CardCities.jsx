@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 
 function CardCities() {
 const filteredCities = useSelector(store => store.citiesReducer.filterCities)
-console.log(filteredCities);
+// console.log(filteredCities);
 return (
   <ImageList sx={{ width: '90vw', margin: '2rem', }}>
       <p style={{display: 'none'}}>Hola</p>

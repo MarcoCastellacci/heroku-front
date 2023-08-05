@@ -39,51 +39,54 @@ export default function SignUp() {
     const [selectCountry, setSelectCountry] = React.useState();
     const dispatch = useDispatch()
 
-    Swal.fire({
-        title: 'Please Select your country',
-        input: 'select',
-        inputOptions: {
-            'Argentina': 'Argentina',
-            'Australia': 'Australia',
-            'Brazil': 'Brazil',
-            'Chile': 'Chile',
-            'Colombia': 'Colombia',
-            'China': 'China',
-            'Mexico': 'Mexico',
-            'Germany': 'Germany',
-            'France': 'France',
-            'India': 'India',
-            'Italy': 'Italy',
-            'Japan': 'Japan',
-            'Korea': 'Korea',
-            'Quatar': 'Quatar',
-            'England': 'England',
-            'EEUU': 'EEUU',
-            'Spain': 'Spain',
-        },
-        inputPlaceholder: 'Select your country',
-        inputAttributes: {
-            name: 'select-country'
-        },
-        showCancelButton: false,
-        allowOutsideClick: false,
-        preConfirm: (country) => {
-            setSelectCountry(country)
-        },
-        inputValidator: (value) => {
-            return new Promise((resolve) => {
-                if (value === '') {
-                    resolve('You need to select a country')
-                } else {
-                    resolve()
-                }
-            })
-        },
-    }).then((result) => {
-        if (result.value) {
-            Swal.close()
-        }
-    })
+
+    if (!selectCountry) {
+        Swal.fire({
+            title: 'Please Select your country',
+            input: 'select',
+            inputOptions: {
+                'Argentina': 'Argentina',
+                'Australia': 'Australia',
+                'Brazil': 'Brazil',
+                'Chile': 'Chile',
+                'Colombia': 'Colombia',
+                'China': 'China',
+                'Mexico': 'Mexico',
+                'Germany': 'Germany',
+                'France': 'France',
+                'India': 'India',
+                'Italy': 'Italy',
+                'Japan': 'Japan',
+                'Korea': 'Korea',
+                'Quatar': 'Quatar',
+                'England': 'England',
+                'EEUU': 'EEUU',
+                'Spain': 'Spain',
+            },
+            inputPlaceholder: 'Select your country',
+            inputAttributes: {
+                name: 'select-country'
+            },
+            showCancelButton: false,
+            allowOutsideClick: false,
+            preConfirm: (country) => {
+                setSelectCountry(country)
+            },
+            inputValidator: (value) => {
+                return new Promise((resolve) => {
+                    if (value === '') {
+                        resolve('You need to select a country')
+                    } else {
+                        resolve()
+                    }
+                })
+            },
+        }).then((result) => {
+            if (result.value) {
+                Swal.close()
+            }
+        })
+    }
 
     function alerts(res) {
         const errormsg = res.data.message
@@ -110,7 +113,7 @@ export default function SignUp() {
         }
     }
 
-async function handleSubmit(event){
+    async function handleSubmit(event) {
         event.preventDefault();
         const userData = {
             name: event.target[0].value,
@@ -121,7 +124,7 @@ async function handleSubmit(event){
             country: selectCountry,
             from: 'form-signup'
         }
-    const res = await dispatch(userActions.signUp(userData))
+        const res = await dispatch(userActions.signUp(userData))
         alerts(res)
     };
 

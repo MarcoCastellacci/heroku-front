@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let apiUrl = "https://api-mytinerary.onrender.com/";
+let apiUrl = "https://heroku-back-lp4y-dev.fl0.io/";
 // let apiUrl = "http://localhost:4000/"
 
 const activitiesActions = {

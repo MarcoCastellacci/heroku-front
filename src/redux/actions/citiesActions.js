@@ -1,13 +1,14 @@
-import axios from "axios";  
+import axios from "axios";
 
-let apiUrl = "https://api-mytinerary.onrender.com/";
-// let apiUrl = "http://localhost:4000/"
+// let apiUrl = process.env.REACT_APP_URL;
+let apiUrl = "https://heroku-back-lp4y-dev.fl0.io/"
+
 
 const citiesActions = {
     createCity: (name, country, info, image) => {
         return async (dispatch, getState) => {
             try {
-                await axios.post(apiUrl + `api/city/`, {name, country, info, image})
+                await axios.post(apiUrl + `api/city/`, { name, country, info, image })
             } catch (error) {
                 console.log(error)
             }
@@ -17,8 +18,8 @@ const citiesActions = {
         return async (dispatch, getState) => {
             try {
                 const res = await axios.get(apiUrl + 'api/cities')
-                console.log(res);
-                dispatch({type: 'GET_CITIES', payload: res.data.response.cities
+                dispatch({
+                    type: 'GET_CITIES', payload: res.data.response
                 })
             } catch (error) {
                 console.log(error)
@@ -29,7 +30,7 @@ const citiesActions = {
         return async (dispatch, getState) => {
             try {
                 const res = await axios.get(apiUrl + `api/cities/${id}`)
-                dispatch({type: 'GET_CITY', payload: res.data.response})
+                dispatch({ type: 'GET_CITY', payload: res.data.response })
             } catch (error) {
                 console.log(error)
             }
@@ -53,10 +54,10 @@ const citiesActions = {
             }
         }
     },
-    filterCities: (input) => { 
+    filterCities: (input) => {
         return async (dispatch, getState) => {
             try {
-                dispatch({type: 'FILTER_CITIES', payload: input})
+                dispatch({ type: 'FILTER_CITIES', payload: input })
             } catch (error) {
                 console.log(error)
             }

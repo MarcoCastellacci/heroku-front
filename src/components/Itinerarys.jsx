@@ -51,7 +51,6 @@ export default function Itinerarys(props) {
         setReload(!reload);
         console.log(res)
         alerts(res)
-
     }
     async function updateComment(event) {
         const commentData = {

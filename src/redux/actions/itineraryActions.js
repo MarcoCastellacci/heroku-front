@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-let urlApi = "https://api-mytinerary.onrender.com/";
-//let urlApi = "http://localhost:4000/"
+let urlApi = "https://heroku-back-lp4y-dev.fl0.io/";
+// let urlApi = "http://localhost:4000/"
 
 const itineraryActions = {
     getItinerary: (id) => { 

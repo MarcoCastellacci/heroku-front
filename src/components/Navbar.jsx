@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Logo from '../img/logo.png';
 import { Link as RouterLink, useNavigate } from "react-router-dom";
-import { useSelector, useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Avatar from '@mui/material/Avatar';
 import userActions from '../redux/actions/userActions';
 
@@ -42,11 +42,14 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
-const user = useSelector(store => store.userReducer.user);
-function signOut() {
-        dispatch(userActions.SignOutUser())
-        navigate('/')
-    }
+  const user = useSelector(store => store.userReducer.user);
+
+  function signOut() {
+    dispatch(userActions.SignOutUser())
+    navigate('/')
+    window.location.reload();
+  }
+
   return (
     <AppBar position="static" sx={{
       backgroundImage: "linear-gradient(to top, #00c6fb 0%, #005bea 100%)",
@@ -138,13 +141,13 @@ function signOut() {
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, }}>
                 {user ? <Avatar
-                            alt="User Image"
-                            src={user.image}
-                            sx={{ width: 56, height: 56 }}
-                            /> : <AccountCircleIcon sx={{
-                                  width: '4rem',
-                                  fontSize: '3rem',
-                                  }} />}
+                  alt="User Image"
+                  src={user.image}
+                  sx={{ width: 56, height: 56 }}
+                /> : <AccountCircleIcon sx={{
+                  width: '4rem',
+                  fontSize: '3rem',
+                }} />}
               </IconButton>
             </Tooltip>
             <Menu
@@ -165,17 +168,23 @@ function signOut() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-            {user ? <Typography onClick={signOut}>Sign Out</Typography> :
-              settings.map((setting, index) => (
-                <RouterLink key={index} to={setting.to} onClick={handleCloseUserMenu}>
-                  <MenuItem sx={{ textDecoration: 'none', }}>
-                    <Typography sx={{
-                      color: 'black'
-                    }} textAlign="center">{setting.name}</Typography>
-                  </MenuItem>
-                </RouterLink>)) 
-                      
-                    }
+              {user ? <RouterLink to={'/'} sx={{ textDecoration: 'none', }}>
+                <Typography onClick={signOut} sx={{
+                        color: 'black',
+                        margin: '0 10px'
+                      }} textAlign="center">Sign Out</Typography>
+              </RouterLink>
+                :
+                settings.map((setting, index) => (
+                  <RouterLink key={index} to={setting.to} onClick={handleCloseUserMenu}>
+                    <MenuItem sx={{ textDecoration: 'none', }}>
+                      <Typography sx={{
+                        color: 'black'
+                      }} textAlign="center">{setting.name}</Typography>
+                    </MenuItem>
+                  </RouterLink>))
+
+              }
             </Menu>
           </Box>
         </Toolbar>

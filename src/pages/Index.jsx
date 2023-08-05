@@ -1,5 +1,5 @@
 import React from 'react';
-// import Carrousel from '../components/Carrousel';
+import Carrousel from '../components/Carrousel';
 import CallToAction from '../components/CallToAction';
 
 import '../styles/styles.css';
@@ -13,9 +13,9 @@ return (
     <div className="call">
         <CallToAction/>
     </div>
-    {/* <div className="carrousel">
+    <div className="carrousel">
         <Carrousel />
-    </div> */}
+    </div>
 </div>
 </>
 )

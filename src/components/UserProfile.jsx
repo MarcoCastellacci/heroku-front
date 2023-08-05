@@ -44,7 +44,6 @@ export default function UserProfile(props) {
                     />
                     <CardMedia
                         component="img"
-                        height="500vh"
                         image={props.user.image}
                         alt="User Profile Picture"
                     />
