@@ -11,6 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SignOut from './SignOut';
+import CreateCity from './CreateCity';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -64,6 +65,12 @@ export default function UserProfile(props) {
                             <ExpandMoreIcon />
                         </ExpandMore>
                     </CardActions>
+                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        <Typography variant='h6' sx={{ color: 'whitesmoke' }}>Create City</Typography>
+                        <CardContent>
+                            <CreateCity />
+                        </CardContent>
+                    </Collapse>
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
                         <Typography variant='h6' sx={{ color: 'whitesmoke' }}>My Likes</Typography>
                         <CardContent>

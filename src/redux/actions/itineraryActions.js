@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let urlApi = "https://heroku-back-lp4y-dev.fl0.io/";
+let urlApi = "https://mytinerary-back-mnw1-dev.fl0.io/";
 // let urlApi = "http://localhost:4000/"
 
 const itineraryActions = {

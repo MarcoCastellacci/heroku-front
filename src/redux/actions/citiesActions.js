@@ -1,7 +1,8 @@
 import axios from "axios";
 
-// let apiUrl = process.env.REACT_APP_URL;
-let apiUrl = "https://heroku-back-lp4y-dev.fl0.io/"
+// let apiUrl = "http://localhost:8000/";
+let apiUrl = "https://mytinerary-back-mnw1-dev.fl0.io/"
+
 
 
 const citiesActions = {
