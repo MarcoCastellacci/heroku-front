@@ -45,7 +45,7 @@ async function handleCallbackResponse(response) {
     useEffect(() => {
         /* global google */
         google.accounts.id.initialize ({
-            client_id: '424914064088-0h31c9uc6ufvjcjl8eou061pc52j4nnm.apps.googleusercontent.com',
+            client_id: '529496511687-juv47pmdvij7jpt2ld68icg5n4menlv5.apps.googleusercontent.com',
             callback: handleCallbackResponse,
         });
         google.accounts.id.renderButton(
